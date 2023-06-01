@@ -32,8 +32,9 @@ const val = ref(null);
 
 ## 📃 Props
 
-| Name       | Type           | Default | Description                        |
-| ---------- | -------------- | ------- | ---------------------------------- |
-| `v-model`  | `boolean/null` |         | Standard two way input             |
-| `disabled` | `boolean`      | false   | Makes the component uninteractable |
-| `color`    | `string`       | #3ba13b | Color of the checkbox background   |
+| Name       | Type               | Default | Description                        |
+| ---------- | ------------------ | ------- | ---------------------------------- |
+| `v-model`  | `boolean/null`     |         | Standard two way input             |
+| `disabled` | `boolean`          | false   | Makes the component uninteractable |
+| `color`    | `string`           | #3ba13b | Color of the checkbox background   |
+| `label`    | `string/undefined` |         | Checkbox label                     |
