@@ -19,7 +19,7 @@ Import the component locally or define it globally and include the css file:
 
 ```vue
 <template>
-  <tri-state-checkbox v-model="val" />
+  <tri-state-checkbox v-model="val" label="Vite + Vue" />
 </template>
 
 <script lang="ts" setup>
