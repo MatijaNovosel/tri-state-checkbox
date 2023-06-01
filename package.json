@@ -1,5 +1,5 @@
 {
-  "name": "tri-state-checkbox",
+  "name": "vue-tri-state-checkbox",
   "private": false,
   "version": "0.0.1",
   "type": "module",
@@ -9,7 +9,7 @@
   },
   "keywords": [
     "checkbox",
-    "tri-state-checkbox",
+    "vue-tri-state-checkbox",
     "material",
     "material-ui",
     "vue3",
@@ -20,12 +20,12 @@
     "dist",
     "src/components/"
   ],
-  "main": "./dist/tri-state-checkbox.umd.cjs",
-  "module": "./dist/tri-state-checkbox.js",
+  "main": "./dist/vue-tri-state-checkbox.umd.cjs",
+  "module": "./dist/vue-tri-state-checkbox.js",
   "exports": {
     ".": {
-      "import": "./dist/tri-state-checkbox.js",
-      "require": "./dist/tri-state-checkbox.umd.cjs"
+      "import": "./dist/vue-tri-state-checkbox.js",
+      "require": "./dist/vue-tri-state-checkbox.umd.cjs"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",

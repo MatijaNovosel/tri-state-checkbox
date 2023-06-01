@@ -9,7 +9,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "TriStateCheckbox",
-      fileName: "tri-state-checkbox"
+      fileName: "vue-tri-state-checkbox"
     },
     rollupOptions: {
       external: ["vue"],
