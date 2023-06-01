@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/MatijaNovosel/tri-state-checkbox/assets/36193643/0d2f440b-7057-418a-b6e0-9be0513a3e4d" />
+  <img src="https://github.com/MatijaNovosel/tri-state-checkbox/assets/36193643/3d93f8b2-7f57-41b9-9bb2-dce3b79b051b" />
 </div>
 
 <h1 align=center>Vue tri state checkbox</h1>
