@@ -8,9 +8,7 @@ What we'll be doing is writing an NPM package that exports a Vue 3 component wit
 
 ## Starting off
 
-I'll be using Vite for this project since it is a nice alternative to webpack as a build tool and development server written by Evan You himself.
-
-Use your package manager of choice to create a project, I'll go with `yarn`:
+I'll be using Vite for this project since it is a nice alternative to webpack as a build tool and development server. Use your package manager of choice to create a project, I'll go with `yarn`:
 
 `yarn create vite`
 
@@ -28,20 +26,70 @@ Your `src` folder should look like this:
 
 </slika/>
 
-## Writing the component
+## The component
 
 Write your component as you would usually with regards to how Vue 3 works, I am going to use this as an example for my component:
 
-```typescript
+```ts
 <template>
-  <div>
-
-  </div>
+  <label class="m-checkbox">
+    <input
+      type="checkbox"
+      :disabled="disabled"
+      :indeterminate="val === null"
+      :checked="val === true"
+      @click="change"
+    />
+    <span>
+      {{ label }}
+    </span>
+  </label>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
+import { ref, watch } from "vue";
 
-</setup>
+const props = withDefaults(
+  defineProps<{
+    label?: string;
+    modelValue: boolean | null;
+    disabled?: boolean;
+    color?: string;
+  }>(),
+  {
+    color: "#2f4fef"
+  }
+);
+
+const emit = defineEmits<{
+  (e: "update:modelValue", value: boolean | null): void;
+}>();
+
+const val = ref<boolean | null>(false);
+
+const change = () => {
+  if (val.value === false) val.value = null;
+  else if (val.value === null) val.value = true;
+  else val.value = false;
+  emit("update:modelValue", val.value);
+};
+
+watch(
+  () => props.modelValue,
+  (value) => (val.value = value)
+);
+</script>
 ```
 
-I added sass as well since Vite supports it out of the box and it makes writing css more convenient: `yarn add sass`
+## package.json
+
+We will need to alter `package.json` in order to distribute the newly created component (the words component and package will be used interchangeably from now on):
+
+- `private` needs to be set to `false`
+- add a `files` property to specify which files will play a role in how the package functions, after building the component with `yarn build` all of the distribution files will be inside the `dist` folder
+
+```
+"files": ["dist", "src/components/"],
+```
+
+Additionally, we will be adding the `src/components` folder because the components are exported from there.
