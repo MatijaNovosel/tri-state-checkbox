@@ -24,7 +24,7 @@ const props = withDefaults(
     color?: string;
   }>(),
   {
-    color: "#2f4fef"
+    color: "#3ba13b"
   }
 );
 
