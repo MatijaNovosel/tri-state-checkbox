@@ -1,8 +1,38 @@
 {
-  "name": "package-test",
-  "private": true,
-  "version": "0.0.0",
+  "name": "tri-state-checkbox",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatijaNovosel/tri-state-checkbox.git"
+  },
+  "keywords": [
+    "checkbox",
+    "tri-state-checkbox",
+    "material",
+    "material-ui",
+    "vue3",
+    "vue",
+    "vuejs"
+  ],
+  "files": [
+    "dist",
+    "src/components/"
+  ],
+  "main": "./dist/tri-state-checkbox.umd.cjs",
+  "module": "./dist/tri-state-checkbox.js",
+  "exports": {
+    ".": {
+      "import": "./dist/tri-state-checkbox.js",
+      "require": "./dist/tri-state-checkbox.umd.cjs"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -12,10 +42,15 @@
     "sass": "^1.62.1",
     "vue": "^3.2.47"
   },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "path": "^0.12.7",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
+    "vite-plugin-dts": "^2.3.0",
     "vue-tsc": "^1.4.2"
   }
 }
