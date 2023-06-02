@@ -3,7 +3,7 @@
 </div>
 
 <h1 align=center>Vue tri state checkbox</h1>
-<p align=center>A material tri state checkbox component for Vue 3.</p>
+<p align=center>A material tri state checkbox component for Vue 3. Part of my <a href="https://dev.to/matijanovosel/making-and-distributing-a-ui-component-with-vue-3-and-vite-12lk"> component export tutorial</a>.</p>
 
 ## 🚀 Installation
 
