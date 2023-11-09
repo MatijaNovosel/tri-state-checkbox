@@ -13,6 +13,10 @@ Install using your package manager of choice:
 yarn add vue-tri-state-checkbox
 ```
 
+## 📺 Demo
+
+https://matija-components.vercel.app/tri-state-checkbox
+
 ## ⚙️ Usage
 
 Import the component locally or define it globally and include the css file:
