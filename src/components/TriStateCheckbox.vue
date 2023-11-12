@@ -1,5 +1,5 @@
 <template>
-  <label class="m-checkbox">
+  <label class="tri-checkbox">
     <input
       type="checkbox"
       :disabled="disabled"
@@ -48,7 +48,7 @@ watch(
 </script>
 
 <style lang="scss">
-.m-checkbox {
+.tri-checkbox {
   z-index: 0;
   position: relative;
   display: inline-block;
