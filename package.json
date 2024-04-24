@@ -24,6 +24,7 @@
   "module": "./dist/vue-tri-state-checkbox.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/vue-tri-state-checkbox.js",
       "require": "./dist/vue-tri-state-checkbox.umd.cjs"
     },
@@ -32,7 +33,6 @@
       "require": "./dist/style.css"
     }
   },
-  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
